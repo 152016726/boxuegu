@@ -1,5 +1,9 @@
 define(['jquery', 'jqueryCookie', 'nprogress', 'loading'], function($, undefined, nprogress, undefined) {
 	
+	// 设置历史最后一个登陆人的头像
+	var tcAvatar = JSON.parse($.cookie('userInfo') || '{}').tc_avatar;
+	$('.avatar img').attr('src', tcAvatar? tcAvatar: '/img/default.png');
+	
 	// 登陆效验
 	(function() {
 		

@@ -42,7 +42,8 @@ define([], function () {
       jqueryForm: 'lib/jquery-form/jquery.form',
       jqueryRegion: 'lib/jquery-region/jquery.region',
       nprogress: 'lib/nprogress/nprogress',
-      uploadify: 'lib/uploadify/jquery.uploadify'
+      uploadify: 'lib/uploadify/jquery.uploadify',
+      jcrop: 'lib/Jcrop/js/Jcrop'
     },
 
     shim: {
@@ -64,6 +65,11 @@ define([], function () {
       
       // 这个上传文件的插件依赖jquery
       uploadify: {
+      	deps: ['jquery']
+      },
+      
+      // 这个图片裁剪插件依赖jquery
+      jcrop: {
       	deps: ['jquery']
       }
     }
